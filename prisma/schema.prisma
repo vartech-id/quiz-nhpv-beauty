@@ -14,7 +14,7 @@ datasource db {
 
 enum QuizAnswer {
   LEARNING_TO_LOVE
-  TAKING_THE_STEPS
+  TAKING_THE_STEP
   LOVE_AND_GUARDED
 }
 

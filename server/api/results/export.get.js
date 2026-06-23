@@ -15,7 +15,7 @@ function formatToWIB(date) {
 
 const answerLabels = {
   LEARNING_TO_LOVE: "Learning to Love",
-  TAKING_THE_STEPS: "Taking the Steps",
+  TAKING_THE_STEP: "Taking the Step",
   LOVE_AND_GUARDED: "Love and Guarded",
 };
 
