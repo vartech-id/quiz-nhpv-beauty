@@ -4,6 +4,10 @@
 <template>
     <main>
         <h1>love-and-guarded</h1>
-        <NuxtLink to="/category/love-and-guarded/explanation-1">Next</NuxtLink>
+        <NextButton
+            to="/category/love-and-guarded/explanation-1"
+            button-class="w-30 rounded-full bg-fourth-blue px-6 py-3 text-white"
+            >Next</NextButton
+        >
     </main>
 </template>

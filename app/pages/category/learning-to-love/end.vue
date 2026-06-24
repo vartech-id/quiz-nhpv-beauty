@@ -9,6 +9,10 @@ const {whatsappLink} = useCategoryWhatsAppLink()
         <AppQrCode
             :value="whatsappLink" 
         />
-        <NuxtLink to="/">Back</NuxtLink>
+        <NextButton
+            to="/"
+            button-class="w-30 rounded-full bg-secondary-lavender px-6 py-3 text-white"
+            >Back</NextButton
+        >
     </main>
 </template>

@@ -5,6 +5,10 @@ const instagramLink = "https://www.instagram.com/ngobrolinhpv";
   <main>
     <h1>IG</h1>
     <AppQrCode :value="instagramLink" :size="300" />
-    <NuxtLink to="/nona-welcome">Lanjut</NuxtLink>
+    <NextButton
+      to="/nona-welcome"
+      button-class="w-30 rounded-full bg-primary-green px-6 py-3 text-white"
+      >Lanjut</NextButton
+    >
   </main>
 </template>

@@ -5,6 +5,10 @@ const { categorySlug } = useCategorySlug();
   <main>
     <h1>end-1</h1>
     <h2>{{ categorySlug }}</h2>
-    <NuxtLink to="/">Back</NuxtLink>
+    <NextButton
+      to="/"
+      button-class="w-30 rounded-full bg-tertiary-pink px-6 py-3 text-white"
+      >Back</NextButton
+    >
   </main>
 </template>
