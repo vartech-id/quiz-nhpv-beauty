@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/font/CormorantGaramond.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/font/InstrumentSans.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-primary-green: #00525c;
   --color-secondary-lavender: #df9cef;
@@ -7,3 +23,7 @@
   --color-fourth-blue: #9f9acd;
 }
 
+body {
+  font-family: "Cormorant Garamond", "Instrument Sans", Georgia, "Times New Roman",
+    serif;
+}

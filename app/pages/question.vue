@@ -139,10 +139,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <main class="min-h-screen flex justify-center items-center">
+  <div class="wrapper flex justify-center items-center">
     <div ref="stageRef" class="animation-stage">
       <section v-if="showIntro" class="intro-box">
-        <img class="w-80" src="/images/question/intro.png" alt="intro-image" />
+        <img class="w-80" src="/images/question/intro.png" alt="intro-image" >
       </section>
 
       <section class="choices-section flex flex-col gap-8">
@@ -181,10 +181,15 @@ onUnmounted(() => {
         </div>
       </section>
     </div>
-  </main>
+  </div>
 </template>
 
 <style scoped>
+.wrapper{
+  background: url("./images/nona-question.png");
+  height: 100vh;
+}
+
 .animation-stage {
   position: relative;
 }

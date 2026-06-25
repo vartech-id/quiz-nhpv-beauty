@@ -49,7 +49,7 @@ defineEmits(["click"]);
 
 <style scoped>
 .next-button:not(:disabled) {
-  animation: next-button-scale 1.6s ease-in-out infinite;
+  animation: next-button-scale 1.8s ease-in-out infinite;
   transform-origin: center;
   will-change: transform;
 }
@@ -61,7 +61,7 @@ defineEmits(["click"]);
   }
 
   50% {
-    transform: scale(1.05);
+    transform: scale(1.09);
   }
 }
 </style>
