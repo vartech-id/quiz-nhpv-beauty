@@ -65,7 +65,7 @@ const bubbleStyle = computed(() => ({
   position: relative;
 
   width: 100%;
-  min-height: 150px;
+
   padding: 28px 44px;
 
   border: 0;

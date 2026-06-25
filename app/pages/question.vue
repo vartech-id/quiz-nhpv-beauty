@@ -83,6 +83,7 @@ onMounted(() => {
           autoAlpha: 1,
           y: 0,
           duration: 2,
+          delay: 0.5,
           ease: "expoScale",
         },
       )
@@ -138,14 +139,14 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <main class="min-h-screen">
+  <main class="min-h-screen flex justify-center items-center">
     <div ref="stageRef" class="animation-stage">
       <section v-if="showIntro" class="intro-box">
-        <img class="w-80" src="/images/question/intro.png" alt="intro-image" >
+        <img class="w-80" src="/images/question/intro.png" alt="intro-image" />
       </section>
 
-      <section class="choices-section">
-        <div class="flex flex-col gap-3">
+      <section class="choices-section flex flex-col gap-8">
+        <div class="flex flex-col gap-5">
           <ChatBubbleButton
             v-for="choice in choices"
             :key="choice.answer"
@@ -165,17 +166,19 @@ onUnmounted(() => {
             </p>
           </ChatBubbleButton>
         </div>
-        <NextButton
-          :disabled="!selectedChoice || !choicesReady || isSubmitting"
-          :button-class="
-            selectedChoice && choicesReady && !isSubmitting
-              ? 'cursor-pointer rounded-full bg-primary-green px-8 py-3 text-white'
-              : 'cursor-not-allowed rounded-full bg-gray-300 px-8 py-3 text-gray-500'
-          "
-          @click="goNext"
-        >
-          {{ isSubmitting ? "Menyimpan..." : "Lihat Selengkapnya" }}
-        </NextButton>
+        <div class="w-full flex justify-center items-center">
+          <NextButton
+            :disabled="!selectedChoice || !choicesReady || isSubmitting"
+            :button-class="
+              selectedChoice && choicesReady && !isSubmitting
+                ? 'cursor-pointer rounded-full bg-primary-green px-8 py-3 text-white'
+                : 'cursor-not-allowed rounded-full bg-gray-300 px-8 py-3 text-gray-500'
+            "
+            @click="goNext"
+          >
+            {{ isSubmitting ? "Menyimpan..." : "Lihat Selengkapnya" }}
+          </NextButton>
+        </div>
       </section>
     </div>
   </main>
