@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div class="nona-welcome-wrapper flex items-center">
+  <div class="wrapper nona-welcome flex items-center">
     <div class="mx-auto">
       <NextButton
         to="/question"
@@ -11,10 +11,9 @@
   </div>
 </template>
 <style>
-.nona-welcome-wrapper {
+.nona-welcome {
   background: url("./images/welcome-nona.png");
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
 }
 </style>

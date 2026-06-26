@@ -7,18 +7,21 @@ const choices = [
     explanation: "Aku mau tahu lebih banyak tentang HPV",
     answer: "LEARNING_TO_LOVE",
     to: "/category/learning-to-love",
+    loveColor: "#ce93d8",
   },
   {
     label: "Aku tahu HPV, tapi...",
     explanation: "Masih ada pertanyaan soal vaksin dan pencegahan",
     answer: "TAKING_THE_STEP",
     to: "/category/taking-the-step",
+    loveColor: "#f7b2c4",
   },
   {
     label: "Pencegahan HPV? Udah dong!",
     explanation: "Aku sudah vaksin atau sudah aktif jaga kesehatan",
     answer: "LOVE_AND_GUARDED",
     to: "/category/love-and-guarded",
+    loveColor: "#8ed8cf",
   },
 ];
 
@@ -139,55 +142,53 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="wrapper flex justify-center items-center">
+  <div class="wrapper nona-question flex justify-center items-center pt-80">
     <div ref="stageRef" class="animation-stage">
-      <section v-if="showIntro" class="intro-box">
-        <img class="w-80" src="/images/question/intro.png" alt="intro-image" >
+      <section v-if="showIntro" class="intro-box pl-25 pb-38">
+        <img class="w-full" src="/images/question/intro.png" alt="intro-image" >
       </section>
 
-      <section class="choices-section flex flex-col gap-8">
-        <div class="flex flex-col gap-5">
+      <section class="choices-section flex flex-col gap-14">
+        <div class="flex flex-col gap-8 text-primary-green">
           <ChatBubbleButton
             v-for="choice in choices"
             :key="choice.answer"
             class="choice-button"
             :selected="selectedChoice?.answer === choice.answer"
             :disabled="!choicesReady || isSubmitting"
+            :love-color="choice.loveColor"
             stroke-color="#bd5bb5"
             selected-color="#dddd20"
             @click="selectChoice(choice)"
           >
-            <h2 class="text-xl font-bold">
+            <h2 class="text-[2.6rem]">
               {{ choice.label }}
             </h2>
 
-            <p class="mt-1">
+            <p class="text-[1.9rem]">
               {{ choice.explanation }}
             </p>
           </ChatBubbleButton>
         </div>
-        <div class="w-full flex justify-center items-center">
           <NextButton
             :disabled="!selectedChoice || !choicesReady || isSubmitting"
             :button-class="
               selectedChoice && choicesReady && !isSubmitting
-                ? 'cursor-pointer rounded-full bg-primary-green px-8 py-3 text-white'
-                : 'cursor-not-allowed rounded-full bg-gray-300 px-8 py-3 text-gray-500'
+                ? 'w-full px-[2rem] py-[2rem] rounded-3xl text-[2.25rem] cursor-pointer bg-primary-green  text-white'
+                : 'w-full px-[2rem] py-[2rem] rounded-3xl text-[2.25rem] cursor-not-allowed bg-gray-300 text-gray-500'
             "
             @click="goNext"
           >
-            {{ isSubmitting ? "Menyimpan..." : "Lihat Selengkapnya" }}
+            {{ isSubmitting ? "Menyimpan..." : "Lihat Hasilnya" }}
           </NextButton>
-        </div>
       </section>
     </div>
   </div>
 </template>
 
 <style scoped>
-.wrapper{
+.nona-question {
   background: url("./images/nona-question.png");
-  height: 100vh;
 }
 
 .animation-stage {

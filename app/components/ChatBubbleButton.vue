@@ -15,32 +15,49 @@ const props = defineProps({
     default: "#bd5bb5",
   },
 
-  // Border setelah diklik
   selectedColor: {
     type: String,
     default: "#075b64",
+  },
+
+  loveColor: {
+    type: String,
+    default: "#ce93d8",
   },
 });
 
 defineEmits(["click"]);
 
 const bubbleStyle = computed(() => ({
-  // Isi tidak pernah berubah
   "--bubble-fill": "#ffffff",
-
-  // Border berubah berdasarkan state
   "--bubble-stroke": props.selected ? props.selectedColor : props.strokeColor,
+
+  "--love-fill": props.loveColor,
 }));
 </script>
 
 <template>
-  <div class="flex">
-    <p>KODO</p>
+  <div
+    class="bubble-wrapper flex gap-10"
+    :style="bubbleStyle"
+  >
+    <svg
+      class="love-svg"
+      viewBox="0 0 64.53 63.02"
+      preserveAspectRatio="xMidYMid meet"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        class="love-shape"
+        d="M63.79,35.06c-3.66,13.67-24.12,21.52-39.52,27.25-5.83,2.17-12.3-.84-14.43-6.69-2.86-7.85-5.44-16.66-7.94-23.65C-8.94,1.55,29.68-14.17,35.04,16.96c14.06-12.91,33.54.32,28.75,18.1Z"
+      />
+    </svg>
+
     <button
       type="button"
       class="chat-bubble"
       :class="{ selected }"
-      :style="bubbleStyle"
       :disabled="disabled"
       @click="$emit('click')"
     >
@@ -66,12 +83,13 @@ const bubbleStyle = computed(() => ({
 
 <style scoped>
 .chat-bubble {
+  font-family: "Instrument Sans";
+  line-height: 3rem;
   position: relative;
 
-  width: 100%;
-
-  padding: 28px 44px;
-
+  width: 90%;
+  padding: 40px 60px; /* y and x selections */
+  
   border: 0;
   background: transparent;
 
@@ -124,5 +142,18 @@ const bubbleStyle = computed(() => ({
   justify-content: center;
 
   height: 100%;
+}
+
+.love-svg {
+  width: 64px;
+  height: auto;
+  display: block;
+  overflow: visible;
+  filter: drop-shadow(0.92px 0.92px 0 rgb(0 0 0 / 20%));
+}
+
+.love-shape {
+  fill: var(--love-fill);
+  transition: fill 0.25s ease;
 }
 </style>

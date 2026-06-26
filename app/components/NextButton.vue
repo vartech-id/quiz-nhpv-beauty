@@ -61,7 +61,7 @@ defineEmits(["click"]);
   }
 
   50% {
-    transform: scale(1.09);
+    transform: scale(1.05);
   }
 }
 </style>

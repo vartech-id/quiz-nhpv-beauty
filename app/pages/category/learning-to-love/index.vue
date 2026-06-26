@@ -1,13 +1,24 @@
-<script setup>
-    
-</script>
+<script setup></script>
 <template>
-    <main>
-        <h1>learning-to-love</h1>
-        <NextButton
-            to="/category/learning-to-love/explanation-1"
-            button-class="w-30 rounded-full bg-secondary-lavender px-6 py-3 text-white"
-            >Next</NextButton
-        >
-    </main>
+  <div class="wrapper welcome-pre-explanation learning-to-love">
+      <NextButton
+        to="/category/learning-to-love/explanation-1"
+        button-class="long-btn-welcome bg-secondary-lavender text-white"
+        >Lanjut</NextButton
+      >
+  </div>
 </template>
+<style>
+.learning-to-love {
+  background: url("/images/question/learning-to-love/index.png");
+}
+
+.welcome-pre-explanation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 65rem;
+}
+
+
+</style>

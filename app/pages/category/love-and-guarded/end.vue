@@ -2,7 +2,7 @@
 const { categorySlug } = useCategorySlug();
 </script>
 <template>
-    <main>
+    <div>
         <h1>end-1</h1>
         <h2>{{ categorySlug }}</h2>
         <NextButton
@@ -10,5 +10,5 @@ const { categorySlug } = useCategorySlug();
             button-class="w-30 rounded-full bg-fourth-blue px-6 py-3 text-white"
             >Back</NextButton
         >
-    </main>
+    </div>
 </template>

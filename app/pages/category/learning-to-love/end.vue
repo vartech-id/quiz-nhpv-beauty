@@ -3,7 +3,7 @@ const { categorySlug } = useCategorySlug();
 const {whatsappLink} = useCategoryWhatsAppLink()
 </script>
 <template>
-    <main>
+    <div>
         <h1>end-1</h1>
         <h2>{{ categorySlug }}</h2>
         <AppQrCode
@@ -14,5 +14,5 @@ const {whatsappLink} = useCategoryWhatsAppLink()
             button-class="w-30 rounded-full bg-secondary-lavender px-6 py-3 text-white"
             >Back</NextButton
         >
-    </main>
+    </div>
 </template>
