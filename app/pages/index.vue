@@ -26,7 +26,7 @@ const instagramLink = "https://www.instagram.com/ngobrolinhpv";
 }
 
 .opening {
-  background: url("./images/border-opening.png");
+  background: url("/images/border-opening.png");
   background-position: center;
   background-repeat: no-repeat;
 }

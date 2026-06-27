@@ -188,7 +188,7 @@ onUnmounted(() => {
 
 <style scoped>
 .nona-question {
-  background: url("./images/nona-question.png");
+  background: url("/images/nona-question.png");
 }
 
 .animation-stage {

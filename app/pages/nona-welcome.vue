@@ -12,7 +12,7 @@
 </template>
 <style>
 .nona-welcome {
-  background: url("./images/welcome-nona.png");
+  background: url("/images/welcome-nona.png");
   background-position: center;
   background-repeat: no-repeat;
 }
