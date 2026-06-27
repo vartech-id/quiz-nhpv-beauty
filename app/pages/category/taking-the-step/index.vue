@@ -1,13 +1,21 @@
-<script setup>
-    
-</script>
 <template>
-    <main>
-        <h1>taking-the-step</h1>
-        <NextButton
-            to="/category/taking-the-step/explanation-1"
-            button-class="w-30 rounded-full bg-tertiary-pink px-6 py-3 text-white"
-            >Next</NextButton
-        >
-    </main>
+  <div class="wrapper welcome-pre-explanation taking-the-step">
+      <NextButton
+        to="/category/taking-the-step/explanation-1"
+        button-class="long-btn-welcome bg-tertiary-pink text-white"
+        >Lanjut</NextButton
+      >
+  </div>
 </template>
+<style>
+.taking-the-step {
+  background: url("/images/question/taking-the-step/index.png");
+}
+
+.welcome-pre-explanation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 65rem;
+}
+</style>

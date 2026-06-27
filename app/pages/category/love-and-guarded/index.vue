@@ -1,13 +1,21 @@
-<script setup>
-    
-</script>
 <template>
-    <div>
-        <h1>love-and-guarded</h1>
-        <NextButton
-            to="/category/love-and-guarded/explanation-1"
-            button-class="w-30 rounded-full bg-fourth-blue px-6 py-3 text-white"
-            >Next</NextButton
-        >
-    </div>
+  <div class="wrapper welcome-pre-explanation love-and-guarded">
+      <NextButton
+        to="/category/love-and-guarded/explanation-1"
+        button-class="long-btn-welcome bg-fourth-blue text-white"
+        >Lanjut</NextButton
+      >
+  </div>
 </template>
+<style>
+.love-and-guarded {
+  background: url("/images/question/love-and-guarded/index.png");
+}
+
+.welcome-pre-explanation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 65rem;
+}
+</style>

@@ -32,9 +32,30 @@ const instagramLink = "https://www.instagram.com/ngobrolinhpv";
 }
 
 .long-btn-welcome {
-  padding: 2rem 25rem;
+  padding: 1.8rem 25rem;
   border-radius: 1.5rem;
   font-size: 2.5rem;
   line-height: 2.5rem;
+}
+
+.end-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding-top: 34.5rem;
+}
+
+.qr-end-wrapper {
+  margin-right: 34.5rem;
+  padding: 1.1rem;
+  width: 17%;
+}
+
+.long-btn-end {
+  padding: 1rem 21rem;
+  border-radius: 1.5rem;
+  font-size: 2.5rem;
 }
 </style>

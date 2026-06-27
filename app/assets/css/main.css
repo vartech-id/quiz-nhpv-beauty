@@ -21,6 +21,9 @@
   --color-secondary-lavender: #df9cef;
   --color-tertiary-pink: #f8bbd9;
   --color-fourth-blue: #9f9acd;
+  --color-primary-btn: #4d215e;
+  --color-secondary-btn: #661041;
+  --color-tertiary-btn: #0f0f5b
 }
 
 body {

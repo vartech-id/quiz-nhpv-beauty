@@ -9,8 +9,11 @@ export const useCategorySlug = () => {
       return null;
     }
     const data = segments[categoryIndex + 1].split("-") ?? null;
-
-    return data.join(" ");
+    if (data.join(" ") === "learning to love") {
+      return "masih penasaran?";
+    } else {
+      return data.join(" ");
+    }
   });
 
   return {

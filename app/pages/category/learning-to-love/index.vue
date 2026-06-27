@@ -1,9 +1,8 @@
-<script setup></script>
 <template>
   <div class="wrapper welcome-pre-explanation learning-to-love">
       <NextButton
         to="/category/learning-to-love/explanation-1"
-        button-class="long-btn-welcome bg-secondary-lavender text-white"
+        button-class="long-btn-welcome bg-secondary-lavender text-primary-btn"
         >Lanjut</NextButton
       >
   </div>
@@ -19,6 +18,4 @@
   align-items: center;
   padding-top: 65rem;
 }
-
-
 </style>
