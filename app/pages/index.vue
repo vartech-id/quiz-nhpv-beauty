@@ -44,7 +44,6 @@ const instagramLink = "https://www.instagram.com/ngobrolinhpv";
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  padding-top: 34.5rem;
 }
 
 .qr-end-wrapper {

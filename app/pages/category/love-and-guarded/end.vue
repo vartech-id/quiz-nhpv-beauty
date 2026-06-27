@@ -1,14 +1,20 @@
 <script setup>
-const { categorySlug } = useCategorySlug();
+const { whatsappLink } = useCategoryWhatsAppLink();
 </script>
 <template>
-    <div>
-        <h1>end-1</h1>
-        <h2>{{ categorySlug }}</h2>
-        <NextButton
-            to="/"
-            button-class="w-30 rounded-full bg-fourth-blue px-6 py-3 text-white"
-            >Back</NextButton
-        >
+  <div class="wrapper end-page-wrapper end-love-and-guarded pt-[31rem]">
+    <div class="qr-end-wrapper bg-fourth-blue rounded-2xl">
+      <AppQrCode :value="whatsappLink" />
     </div>
+    <NextButton
+      to="/"
+      button-class="long-btn-end bg-fourth-blue text-tertiary-btn"
+      >Mulai ulang</NextButton
+    >
+  </div>
 </template>
+<style>
+.end-love-and-guarded {
+    background: url("/images/question/love-and-guarded/end.png");
+}
+</style>
