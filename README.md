@@ -1,75 +1,136 @@
-# Nuxt Minimal Starter
+# Quiz NHPV Beauty
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+An interactive web quiz built with Nuxt, Prisma, and SQLite.
 
-## Setup
+The application is designed for a **fixed portrait digital signage display** with a resolution of **1080 × 1920 px (9:16)**.
 
-Make sure to install dependencies:
+## Tech Stack
+
+- Nuxt 4
+- Vue 3
+- Bun
+- Prisma ORM
+- SQLite / LibSQL
+- Tailwind CSS
+
+## Installation
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
+git clone <repository-url>
+cd quiz-nhpv-beauty
 bun install
 ```
 
-## Development Server
+## Environment
 
-Start the development server on `http://localhost:3000`:
+Create a `.env` file in the project root:
+
+```env
+DATABASE_URL="file:./prisma/dev.db"
+```
+
+## Database Setup
+
+Validate the Prisma schema:
 
 ```bash
-# npm
-npm run dev
+bunx --bun prisma validate
+```
 
-# pnpm
-pnpm dev
+Create the database and run migrations:
 
-# yarn
-yarn dev
+```bash
+bunx --bun prisma migrate deploy
+bunx --bun prisma generate
+```
 
-# bun
+When creating a new migration during development:
+
+```bash
+bunx --bun prisma migrate dev --name migration_name
+bunx --bun prisma generate
+```
+
+## Development
+
+```bash
 bun run dev
 ```
 
-## Production
+Open:
 
-Build the application for production:
+```text
+http://localhost:3000
+```
+
+## Production Build
 
 ```bash
-# npm
-npm run build
+bunx --bun prisma generate
+bun run build
+node --env-file=.env .output/server/index.mjs
+```
 
-# pnpm
-pnpm build
+## Digital Signage
 
-# yarn
-yarn build
+Recommended display configuration:
 
-# bun
+```text
+Orientation : Portrait
+Resolution  : 1080 × 1920 px
+Aspect Ratio: 9:16
+Display Scale: 100%
+```
+
+Run Chrome in kiosk mode:
+
+```bash
+chrome.exe --kiosk http://localhost:3000
+```
+
+## Static Assets
+
+Store static files inside the `public` directory.
+
+Example:
+
+```text
+public/images/welcome-nona.png
+```
+
+Use an absolute path:
+
+```vue
+<img src="/images/welcome-nona.png" alt="Welcome Nona" />
+```
+
+For CSS:
+
+```css
+.page {
+  background-image: url("/images/welcome-nona.png");
+}
+```
+
+## Prisma Studio
+
+```bash
+bunx --bun prisma studio
+```
+
+## Common Issues
+
+### Missing database table
+
+```bash
+bunx --bun prisma migrate deploy
+bunx --bun prisma generate
+```
+
+### Missing LibSQL runtime module
+
+```bash
+bun add @libsql/isomorphic-ws ws
+rm -rf .nuxt .output
 bun run build
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
