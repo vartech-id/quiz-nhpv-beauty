@@ -4,7 +4,7 @@
     <div class="mx-auto">
       <NextButton
         to="/question"
-        button-class="rounded-3xl bg-primary-green h-[100px] w-[550px] text-white text-5xl mt-[52rem]"
+        button-class="rounded-3xl bg-primary-green h-[100px] w-[650px] text-white text-5xl mt-[52rem]"
         >Yuk Mulai!</NextButton
       >
     </div>

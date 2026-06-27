@@ -10,7 +10,7 @@
         alt=""
         aria-hidden="true"
       >
-      <div class="virus-exp-btn">
+      <div>
         <p>Kanker serviks? Memangnya seberapa serius penyakit ini?</p>
         <p>Tanya NONA untuk jawaban lengkapnya →</p>
       </div>
@@ -27,17 +27,4 @@
   justify-content: center;
 }
 
-.virus-btn {
-  border-radius: 1.5rem;
-  padding: 2rem;
-  font-size: 2rem;
-  line-height: 2.2rem;
-  display: flex;
-  gap: 2rem;
-}
-
-.virus-icon {
-  width: 63px;
-  height: 63px;
-}
 </style>
