@@ -38,6 +38,13 @@ const instagramLink = "https://www.instagram.com/ngobrolinhpv";
   line-height: 2.5rem;
 }
 
+.welcome-pre-explanation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 65rem;
+}
+
 .end-page-wrapper {
   display: flex;
   flex-direction: column;

@@ -1,13 +1,19 @@
-<script setup>
-    
-</script>
 <template>
-    <div>
-        <h1>explanation-1</h1>
-        <NextButton
-            to="/category/love-and-guarded/explanation-2"
-            button-class="w-30 rounded-full bg-fourth-blue px-6 py-3 text-white"
-            >Next</NextButton
-        >
-    </div>
+  <div class="wrapper love-and-guarded-exp-1 first-exp pt-[90rem]">
+    <NextButton
+      to="/category/love-and-guarded/explanation-2"
+      button-class="long-btn-welcome bg-fourth-blue text-white"
+      >Lanjut</NextButton
+    >
+  </div>
 </template>
+<style>
+.love-and-guarded-exp-1 {
+  background: url("/images/question/love-and-guarded/explanation-1.png");
+}
+
+.first-exp {
+  display: flex;
+  justify-content: center;
+}
+</style>
