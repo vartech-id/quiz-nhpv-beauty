@@ -1,10 +1,10 @@
 <script setup>
-const { whatsappLink } = useCategoryWhatsAppLink();
+const customLink = "https://x.nivi.io/nona_hpv_art1"
 </script>
 <template>
   <div class="wrapper end-page-wrapper end-taking-the-step pt-[33.3rem]">
     <div class="qr-end-wrapper bg-tertiary-pink rounded-2xl">
-      <AppQrCode :value="whatsappLink" />
+      <AppQrCode :value="customLink" />
     </div>
     <NextButton
       to="/"

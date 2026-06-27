@@ -28,4 +28,13 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.6s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
 </style>
