@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper taking-the-step-exp-2 first-exp pt-[90rem]">
+  <div class="wrapper taking-the-step-exp-2 first-exp pt-[8rem]">
     <NextButton
       to="/category/taking-the-step/end"
       button-class="virus-btn bg-tertiary-pink text-secondary-btn"

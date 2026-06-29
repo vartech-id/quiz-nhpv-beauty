@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper love-and-guarded-exp-2 first-exp pt-[90rem]">
+  <div class="wrapper love-and-guarded-exp-2 first-exp pb-[20rem]">
     <NextButton
       to="/category/love-and-guarded/end"
       button-class="virus-btn bg-fourth-blue text-tertiary-btn"
