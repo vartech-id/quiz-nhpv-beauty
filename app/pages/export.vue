@@ -50,6 +50,7 @@ async function exportResults() {
     >
       {{ errorMessage }}
     </p>
+    <NuxtLink to="/" class="export-button">Home</NuxtLink>
   </div>
 </template>
 
