@@ -2,7 +2,7 @@
   <div class="wrapper taking-the-step-exp-1 first-exp pt-[90rem]">
     <NextButton
       to="/category/taking-the-step/explanation-2"
-      button-class="long-btn-welcome bg-tertiary-pink text-white"
+      button-class="long-btn-welcome bg-tertiary-pink text-secondary-btn"
       >Lanjut</NextButton
     >
   </div>

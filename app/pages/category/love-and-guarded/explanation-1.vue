@@ -2,7 +2,7 @@
   <div class="wrapper love-and-guarded-exp-1 first-exp pt-[90rem]">
     <NextButton
       to="/category/love-and-guarded/explanation-2"
-      button-class="long-btn-welcome bg-fourth-blue text-white"
+      button-class="long-btn-welcome bg-fourth-blue text-tertiary-btn"
       >Lanjut</NextButton
     >
   </div>
